@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditActivity">
+
+    <TextView
+        android:id="@+id/rcdDateText"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:text="2020/10/28"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toStartOf="@+id/ttlAlcVolText"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ttlAlcVolText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="ドリンク合計"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toStartOf="@+id/DayTtlAlcVol"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/rcdDateText"
+        app:layout_constraintTop_toTopOf="@+id/rcdDateText" />
+
+    <TextView
+        android:id="@+id/codeText"
+        android:layout_width="35dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="code"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintEnd_toStartOf="@+id/kindDrnkText"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="@+id/rcdDateText"
+        app:layout_constraintTop_toBottomOf="@+id/rcdDateText" />
+
+    <TextView
+        android:id="@+id/kindDrnkText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="飲料の種類"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toStartOf="@+id/drnkEaText"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/codeText"
+        app:layout_constraintTop_toTopOf="@+id/codeText" />
+
+    <TextView
+        android:id="@+id/drnkEaText"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="数量"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toStartOf="@+id/eachAlcVolText"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/kindDrnkText"
+        app:layout_constraintTop_toTopOf="@+id/kindDrnkText" />
+
+    <TextView
+        android:id="@+id/eachAlcVolText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:text="ドリンク量"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/drnkEaText"
+        app:layout_constraintTop_toTopOf="@+id/drnkEaText" />
+
+    <TextView
+        android:id="@+id/codeAText"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:text="8"
+        app:layout_constraintEnd_toEndOf="@+id/codeText"
+        app:layout_constraintStart_toStartOf="@+id/codeText"
+        app:layout_constraintTop_toBottomOf="@+id/codeText" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        app:layout_constraintStart_toStartOf="@+id/kindDrnkText"
+        app:layout_constraintTop_toTopOf="@+id/codeAText" />
+
+    <Button
+        android:id="@+id/plusBtn1"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:text="+"
+        app:layout_constraintStart_toEndOf="@+id/eachDrinkEa1"
+        app:layout_constraintTop_toTopOf="@+id/eachDrinkEa1" />
+
+    <Button
+        android:id="@+id/minusBtn1"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:gravity="top"
+
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/eachDrinkEa1"
+        app:layout_constraintTop_toTopOf="@+id/eachDrinkEa1" />
+
+    <TextView
+        android:id="@+id/eachDrinkEa1"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:text="88"
+        app:layout_constraintEnd_toEndOf="@+id/drnkEaText"
+        app:layout_constraintStart_toStartOf="@+id/drnkEaText"
+        app:layout_constraintTop_toTopOf="@+id/spinner" />
+
+    <TextView
+        android:id="@+id/EachAlcVol1"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:text="88.88"
+        app:layout_constraintEnd_toEndOf="@+id/eachAlcVolText"
+        app:layout_constraintStart_toStartOf="@+id/eachAlcVolText"
+        app:layout_constraintTop_toTopOf="@+id/eachDrinkEa1" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/minusBtn1"
+        app:srcCompat="@android:drawable/arrow_up_float" />
+
+    <TextView
+        android:id="@+id/DayTtlAlcVol"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="88.8"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ttlAlcVolText"
+        app:layout_constraintTop_toTopOf="@+id/ttlAlcVolText" />
+</androidx.constraintlayout.widget.ConstraintLayout>
